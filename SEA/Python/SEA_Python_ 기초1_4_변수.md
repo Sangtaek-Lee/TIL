@@ -153,19 +153,3 @@ else:
 # obj는 None 입니다. 출력 : None은 False 평가
 ```
 
-![image-20220114022423367](C:/Users/%EC%9D%B4%EC%83%81%ED%83%9D/AppData/Roaming/Typora/typora-user-images/image-20220114022423367.png)
-
-![image-20220114022503152](C:/Users/%EC%9D%B4%EC%83%81%ED%83%9D/AppData/Roaming/Typora/typora-user-images/image-20220114022503152.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
