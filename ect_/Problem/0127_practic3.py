@@ -62,21 +62,21 @@
 #####################################
 
 
-def dict_invert(my_dict):
-    dict_temp = {}
+# def dict_invert(my_dict):
+#     dict_temp = {}
     
-    for key, value in my_dict.items():
+#     for key, value in my_dict.items():
 
-        if value in dict_temp.keys():
-            dict_temp[value] += [key]
-        else:
-            dict_temp[value] = [key]
+#         if value in dict_temp.keys():
+#             dict_temp[value] += [key]
+#         else:
+#             dict_temp[value] = [key]
         
-    return dict_temp
+#     return dict_temp
 
 
 
 
-print(dict_invert({1: 10, 2: 20, 3: 30}))
-print(dict_invert({1: 10, 2: 20, 3: 30, 4: 30}))
-print(dict_invert({1: True, 2: True, 3: True}))
+# print(dict_invert({1: 10, 2: 20, 3: 30}))
+# print(dict_invert({1: 10, 2: 20, 3: 30, 4: 30}))
+# print(dict_invert({1: True, 2: True, 3: True}))
