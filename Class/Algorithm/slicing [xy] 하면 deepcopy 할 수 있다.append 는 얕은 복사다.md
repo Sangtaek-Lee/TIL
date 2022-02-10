@@ -1,0 +1,2 @@
+- slicing [x:y] 하면 deepcopy 할 수 있다.
+- append 는 얕은 복사다.
