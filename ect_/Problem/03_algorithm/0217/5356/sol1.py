@@ -15,14 +15,6 @@ for tc in range(1, T + 1):
     max_col = 0
     for i in range(5):
         if max_col < len(matrix[i]):
-            max_col = len(matrix[i]
-
+            max_col = len(matrix[i])
     print(f'#{tc} ')
 
-
-
-# print('1', end='')
-# print('', end='')
-# print('1', end='')
-# print('1', end='')
-# print('1', end='')
