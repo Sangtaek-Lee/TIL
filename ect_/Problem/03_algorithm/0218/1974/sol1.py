@@ -7,7 +7,8 @@ T = int(input())
 def check_list(N, matrix):
     for i in range(1, N+1):
         for j in range(N):
-            if matrix[]
+            if matrix[0]:
+                pass
 
 
 for tc in range(1, T + 1):
