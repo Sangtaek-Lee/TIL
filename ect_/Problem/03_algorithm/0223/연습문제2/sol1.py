@@ -1,4 +1,6 @@
 def powerset(idx, N, t):
+    global cnt
+    cnt += 1
     if idx == N:
         s = 0
         for j in range(N):
@@ -10,6 +12,7 @@ def powerset(idx, N, t):
                 if bit[j]:
                     print(lst[j], end=' ')
             print()
+
 
     else:
         bit[idx] = 0
@@ -23,4 +26,6 @@ N = len(lst)              # 배열 길이
 bit = [0] * N
 s = 0
 t = 10
+cnt = 0
 powerset(0, N, t)
+print(cnt)
