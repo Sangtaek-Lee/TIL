@@ -10,31 +10,63 @@ migrations : model 의 히스토리를 쌓는거
 
 CRUD : Create Read Update Delete (생성, 읽기, 수정, 삭제) 프로그램의 기본적인 기능
 
-
+# Model
 
 - Model
   - 단일한 데이터에 대한 정보를 가짐 (django 데이터 구조)
   - 웹 애플리케이션(장고)의 데이터를 구조화하고 조작(CRUD)하기 위한 도구
 
+- 쿼리(Query)
+  - 데이터를 조회하기 위한 명령어
+  - 조건에 맞는 데이터를 추출하거나 조작하는 명령어
+  - Query를 날린다 -> DB 조작한다.
+- 데이터베이스(DB)
+  - 체계화된 데이터의 모임
+- Database의 기본 구조
+  - 스키마(Schema)
+    - 데이터베이스에서 자료의 구조, 표현방법, 관계 등을 정의한 구조 (structure)
+  - 테이블(Table)
+    - 열(column) : 필드(Field) or 속성
+    - 행(row) : 레코드(record) or 튜플
+  - PK(Primary Key : 기본키) 
+    - 중복 불가, 데이터 베이스 관리 및 설정시 주요하게 활용
+
+# ORM
+
+- ORM (Object Relational Mapping) : **DB를 객체(object)로 조작하기 위해 ORM을 사용**
+
+- 객체 지향 프로그래밍 언어를 사용하여 호환되지 않는 유형의 시스템 간에 데이터(장고 - sql)를 변환하는 프로그래밍 기술
+- Django 는 내장 Django ORM을 사용함
+- sql vs nosql 두 구조가 있다.
+- SQL을 잘 알지 못해도 DB 조작이 가능
+- SQL의 절차적 접근이 아닌 객체 지향적 접근으로 인한 높은 생산성
+- ORM 만으로 완전한 서비스를 구현하기 어려운 경우가 있음
+- 현대 웹 프레임워크의 요점은 웹 개발의 속도를 높이는 것. (생산성)
 
 
-스키마 : 설계도, 구조
 
-테이블 : 표
+# Model 사용 (순서, 설명 등)
 
-행(레코드)
+1. ```python
+   # 각 모델은 django.models.Model 클래스의 서브 클래스로 표현됨
+   # django.db.models 모듈의 Model 클래스를 상속받음
+   from django.db import models
+   							
+   # applications/models.py 에서 model을 정의
+   # models 모듈을 통해 어떠한 타입의 DB 컬럼을 정의할 것인지 정의
+   # title과 content는 모델의 필드를 나타냄
+   # 각 필드는 클래스 속성으로 지정되어 있으며, 각 속성은 각 데이터베이스의 열에 매핑
+   class Article(models.Model):
+       title = models.CharField(Max_length=10)
+       content = models.TextField()
+   ```
 
-PK(Primary Key : 기본키) : 중복 불가, 데이터 베이스 관리 및 설정시 주요하게 활용
+- CharField(max_length=None, **options)
+  - 길이의 제한이 있는 문자열을 넣을 때 사용
+  - CharField의 max_length는 필수 인자
+  - 필드의 최대 길이(문자), 데이터베이스 레벨과 Django의 유효성 검사(값을 검증하는 것)에서 활용
 
 
-
-- ORM
-
-Object Relational Mapping
-
-객체 지향 프로그래밍 언어를 사용하여 호환되지 않는 유형의 시스템 간에 데이터(장고 - sql)를 변환하는 프로그래밍 기술
-
-sql vs nosql 두 구조가 있다.
 
 
 
