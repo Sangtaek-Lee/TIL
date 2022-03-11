@@ -65,6 +65,9 @@ CRUD : Create Read Update Delete (생성, 읽기, 수정, 삭제) 프로그램�
   - 길이의 제한이 있는 문자열을 넣을 때 사용
   - CharField의 max_length는 필수 인자
   - 필드의 최대 길이(문자), 데이터베이스 레벨과 Django의 유효성 검사(값을 검증하는 것)에서 활용
+- TextField(**options)
+  - 글자의 수가 많을 때 사용
+  - max_length 옵션 작성시 자동 양식 필드인 textarea 위젯에 반영은 되지만 모델과 데이터베이스 수준에서는 적용되지 않음 (max_length 사용은 CharField)
 
 
 
