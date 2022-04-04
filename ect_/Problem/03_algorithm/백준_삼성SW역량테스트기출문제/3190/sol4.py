@@ -1,3 +1,6 @@
+
+
+
 import sys
 sys.stdin = open('input.txt')
 # input = sys.stdin.readline
@@ -17,9 +20,9 @@ def dummy():
     visited.append([x, y])
     while True:
         x, y = x + dx[direction], y + dy[direction]
-        print(time-1)
-        pprint(board)
-        print(x, y)
+        # print(time-1)
+        # pprint(board)
+        # print(x, y)
         if 0 <= x < N and 0 <= y < N and board[x][y] != 2:
             if board[x][y] != 1:
                 temp = visited.pop(0)
@@ -27,7 +30,7 @@ def dummy():
                 board[lx][ly] = 0
             visited.append([x, y])
             board[x][y] = 2
-            if times[time] != False:
+            if time in times.keys():
                 temp = times[time]
                 if temp == 'D':
                     direction += 1
@@ -49,12 +52,12 @@ board = [[0]*N for _ in range(N)]
 for i in range(K):
     temp = list(map(int, input().split()))
     board[temp[0]-1][temp[1]-1] = 1
-pprint(board)
+# pprint(board)
 L = int(input())                # 뱀의 방향 변환 정보 1 <= L <= 100
-times = [0]*101
+times = {}
 for _ in range(L):
-    temp = list(map(str, input().split()))
-    times[int(temp[0])] = temp[1]
+    X, C = input().split()
+    times[int(X)] = C
 
 rlt = dummy()
 print(f'{rlt}')
