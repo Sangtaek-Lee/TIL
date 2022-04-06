@@ -1,6 +1,7 @@
 import sys
 sys.stdin = open('input.txt')
 
+
 T = int(input())
 
 for tc in range(1, T + 1):
@@ -10,16 +11,16 @@ for tc in range(1, T + 1):
     result = 0
 
     while len(atom) >= 2:
+        location = {}
+        atom = []
         for i in range(len(atom)):
             atom[i][0] = atom[i][0] + d[atom[i][2]][0]
             atom[i][1] = atom[i][1] + d[atom[i][2]][1]
-        location = {}
         for a in atom:
             try:
                 location[(a[0], a[1])].append(a)
             except Exception:
                 location[(a[0], a[1])] = [a]
-        atom = []
         for l in location:
             if len(location[l]) >= 2:
                 for at in location[l]:
