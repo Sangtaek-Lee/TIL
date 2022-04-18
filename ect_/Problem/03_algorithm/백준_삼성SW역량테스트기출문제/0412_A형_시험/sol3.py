@@ -2,10 +2,6 @@ import sys
 sys.stdin = open('input.txt')
 from pprint import pprint
 
-
-
-
-
 def dfs(x, y, cnt, cal):
     global rlt
     if cnt == 4:
