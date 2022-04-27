@@ -162,6 +162,6 @@ console.log(palette);
 // // 3-2. Spread operator를 활용해 아래 코드를 리팩토링 하시오.
 const info1 = { name: 'Tom', age: 30 }
 const info2 = { isMarried: true, balance: 3000 }
-const fullInfo = Object.assign(info1, ...info2)
+const fullInfo = Object.assign(info1, info2)
 
 console.log(fullInfo)
