@@ -19,8 +19,9 @@ import axios from 'axios'
 import SearchBar from './components/SearchBar.vue'
 import VideoList from './components/VideoList.vue'
 import VideoDetail from './components/VideoDetail.vue'
+require('dotenv').config()
 
-const API_KEY = 'AIzaSyCo9exPN1xdppdzVgOAU3wjtFyOQv0OOtE'
+const API_KEY = ''
 const API_URL = 'https://www.googleapis.com/youtube/v3/search'
 
 export default {
